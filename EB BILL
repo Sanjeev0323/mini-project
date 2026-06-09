@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class EB{
+    public:
+        string name;
+        int units;
+        int charges;
+void charge(){
+    cout<<"Enter the name:";
+    cin>>name;
+    cout<<"Enter the units:"<<endl;
+    cin>>units; 
+    if(units<=100){
+        charges=units*2;
+        cout<<"The total amount of the charges in this month:"<<charges;
+    }
+    else if(units<=300){
+        charges=units*4;
+        cout<<"The total amount of the charges in this month:"<<charges;
+    }
+    else if(units<=1000){
+        charges=units*6;
+        cout<<"The total amount of the charges in this month:"<<charges;
+    }
+    else if(units>1000){
+        charges=units*8;
+        cout<<"The total amount of the charges in this month:"<<charges;
+    }
+}
+};
+int main(){
+    EB e1;
+    e1.charge();
+}
